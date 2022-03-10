@@ -1,4 +1,4 @@
-package assignment.ques2;
+package assignment.ques3;
 
 public class Customer {
 	private int customerId;

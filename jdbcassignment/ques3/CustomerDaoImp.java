@@ -1,4 +1,4 @@
-package assignment.ques2;
+package assignment.ques3;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -130,7 +130,7 @@ public class CustomerDaoImp implements CustomerDao{
 	@Override
 	public List<Customer> listAll() {
 		List<Customer> li=new ArrayList<>();
-		Customer cs=new Customer();
+		
 		Connection conn=null;
 		String sqlC="select * from customerdb";
 		
@@ -142,7 +142,7 @@ public class CustomerDaoImp implements CustomerDao{
 			PreparedStatement pst=conn.prepareStatement(""+sqlC+"");
 			ResultSet rs=pst.executeQuery();
 			while(rs.next()) {
-				
+				Customer cs=new Customer();
 				cs.setCustomerId(rs.getInt("CUSTID"));
 				cs.setName(rs.getString("CUSTNAME"));
 				cs.setAddress(rs.getString("ADDRESS"));

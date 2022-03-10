@@ -1,4 +1,4 @@
-package assignment.ques2;
+package assignment.ques3;
 import java.util.List;
 public interface CustomerDao { 
 		public Customer findCustomerById(int id);
